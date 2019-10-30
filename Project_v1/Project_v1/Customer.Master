@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="Project_v1.Customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <link href="Css/CustomerHomePage.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>   
+    <form id="form1" runat="server">
+        <div style="height:80px">
+            <asp:Label ID="Label1" runat="server" Height="50px" Width="1000px" CssClass="lb1" Text="Pereira Buses"></asp:Label>
+            
+            <div class="menu">
+                
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem Text="Book" NavigateUrl="~/CustomerBook.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="View Bookings" NavigateUrl="~/Bookings.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout"  NavigateUrl="~/LoginPage.aspx"></asp:MenuItem>
+
+                    </Items>
+
+                </asp:Menu>
+
+            </div>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+        </div>
+         <div style="height:380px">
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+             </asp:ContentPlaceHolder>
+
+         </div>
+
+         <div class="div3" style="height:80px">
+             Contact Info:123
+             
+         </div>
+    </form>
+</body>
+</html>
